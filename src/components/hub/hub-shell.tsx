@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { useHubBadges, badgeText } from "@/lib/hub-badges";
+import { CupaiLogo } from "@/components/cupai-logo";
 import {
   ChevronLeft,
   ClipboardList,
