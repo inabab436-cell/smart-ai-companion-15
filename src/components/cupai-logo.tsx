@@ -51,7 +51,7 @@ export function CupaiMark({ className = "h-8 w-8", light = false }: { className?
       {/* inner highlight — the "smile" of the cup */}
       <path
         d="M16.5 24.5c1.2 4.5 3.8 7.4 7.5 8.4"
-        stroke="hsl(var(--primary-foreground))"
+        stroke="var(--primary-foreground)"
         strokeWidth="2.4"
         strokeLinecap="round"
         opacity="0.85"
