@@ -5,6 +5,7 @@ import { ArrowLeft, CreditCard, Loader2, Pencil, Plus, Trash2 } from "lucide-rea
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
+import { CupaiLogo } from "@/components/cupai-logo";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
@@ -175,7 +176,7 @@ function PaymentMethodsPage() {
       <header className="sticky top-0 z-10 border-b border-border/60 bg-background/70 backdrop-blur-xl">
         <div className="mx-auto flex w-full max-w-3xl items-center justify-between px-4 py-3">
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-sm font-semibold tracking-tight">cupai</span>
+            <CupaiLogo markClassName="h-6 w-6" textClassName="text-sm font-semibold tracking-tight" />
           </Link>
           <Button asChild variant="ghost" size="sm">
             <Link to="/dashboard">

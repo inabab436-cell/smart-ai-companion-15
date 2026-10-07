@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { useHubBadges, badgeText } from "@/lib/hub-badges";
+import { CupaiLogo } from "@/components/cupai-logo";
 import {
   ChevronLeft,
   ClipboardList,
@@ -85,7 +86,7 @@ export function HubBar({
           <ChevronLeft className="h-3.5 w-3.5 rotate-180" />
           {backLabel}
         </Link>
-        <span className="hub-display text-sm font-bold text-primary">cupai</span>
+        <CupaiLogo markClassName="h-6 w-6" textClassName="hub-display text-sm font-bold text-primary" />
       </div>
     </header>
   );

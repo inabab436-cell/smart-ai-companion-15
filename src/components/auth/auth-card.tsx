@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
+import { CupaiLogo } from "@/components/cupai-logo";
 
 export function AuthCard({
   title,
@@ -17,7 +18,7 @@ export function AuthCard({
     <div dir="rtl" className="hub grid min-h-screen bg-background lg:grid-cols-2">
       <aside className="relative hidden overflow-hidden bg-gradient-brand p-12 lg:flex lg:flex-col lg:justify-between">
         <div className="flex items-center gap-3">
-          <span className="text-xl font-extrabold text-primary-foreground">coopai</span>
+          <CupaiLogo light markClassName="h-8 w-8" textClassName="text-xl font-extrabold text-primary-foreground" />
         </div>
         <div className="space-y-4">
           <h2 className="text-4xl font-extrabold leading-tight text-primary-foreground">متجرك كله<br />في لوحة واحدة</h2>
@@ -25,14 +26,14 @@ export function AuthCard({
             المنتجات، الطلبات، الشحن والعملاء — بإدارة بسيطة وواضحة.
           </p>
         </div>
-        <span className="text-sm text-primary-foreground/60">© coopai</span>
+        <span className="text-sm text-primary-foreground/60">© Cupai</span>
         <div className="pointer-events-none absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-primary-foreground/10 blur-2xl" />
       </aside>
 
       <main className="flex items-center justify-center px-5 py-10 sm:px-10">
         <div className="w-full max-w-sm">
           <div className="mb-10 flex items-center gap-3 lg:hidden">
-            <span className="text-xl font-extrabold tracking-tight text-gradient-brand">coopai</span>
+            <CupaiLogo markClassName="h-8 w-8" textClassName="text-xl font-extrabold tracking-tight text-gradient-brand" />
           </div>
           <h1 className="text-3xl font-extrabold tracking-tight text-foreground">{title}</h1>
           {subtitle ? <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{subtitle}</p> : null}

@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { CupaiLogo } from "@/components/cupai-logo";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -17,9 +18,9 @@ import { ONBOARDING_DONE_KEY } from "@/lib/onboarding";
 export const Route = createFileRoute("/welcome")({
   head: () => ({
     meta: [
-      { title: "أهلاً بك في coopai · جهّز متجرك" },
-      { name: "description", content: "خطوات بسيطة لتجهيز متجرك والبدء في البيع مع coopai." },
-      { property: "og:title", content: "أهلاً بك في coopai · جهّز متجرك" },
+      { title: "أهلاً بك في Cupai · جهّز متجرك" },
+      { name: "description", content: "خطوات بسيطة لتجهيز متجرك والبدء في البيع مع Cupai." },
+      { property: "og:title", content: "أهلاً بك في Cupai · جهّز متجرك" },
       { property: "og:description", content: "جهّز هوية متجرك وأساسيات البيع في دقائق." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -109,7 +110,7 @@ function WelcomePage() {
       <header className="border-b border-border bg-card/90 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-2xl items-center justify-between px-4">
           <div className="flex items-center gap-2">
-            <span className="text-sm font-bold">coopai</span>
+            <CupaiLogo markClassName="h-6 w-6" textClassName="text-sm font-bold" />
           </div>
           {step < 3 ? (
             <button type="button" onClick={finish} disabled={busy} className="text-xs font-semibold text-muted-foreground hover:text-foreground">
@@ -125,7 +126,7 @@ function WelcomePage() {
         <div key={step} className="mt-8 animate-in fade-in slide-in-from-bottom-2 duration-300">
           {step === 0 && (
             <section className="text-center">
-              <h1 className="mt-5 text-2xl font-extrabold sm:text-3xl">أهلاً بك في coopai 👋</h1>
+              <h1 className="mt-5 text-2xl font-extrabold sm:text-3xl">أهلاً بك في Cupai 👋</h1>
               <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
                 خلال دقيقتين سنجهّز متجرك معًا. كل خطوة يمكنك تعديلها لاحقًا في أي وقت.
               </p>

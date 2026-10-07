@@ -20,10 +20,10 @@ import { ADMIN_EMAIL, adminLogin } from "@/lib/admin.functions";
 export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
-      { title: "تسجيل الدخول · coopai" },
-      { name: "description", content: "سجّل الدخول أو أنشئ حسابك في coopai بالبريد الإلكتروني." },
-      { property: "og:title", content: "تسجيل الدخول · coopai" },
-      { property: "og:description", content: "سجّل الدخول أو أنشئ حسابك في coopai." },
+      { title: "تسجيل الدخول · Cupai" },
+      { name: "description", content: "سجّل الدخول أو أنشئ حسابك في Cupai بالبريد الإلكتروني." },
+      { property: "og:title", content: "تسجيل الدخول · Cupai" },
+      { property: "og:description", content: "سجّل الدخول أو أنشئ حسابك في Cupai." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -134,7 +134,7 @@ function LoginPage() {
   return (
     <AuthCard
       title={titles[mode]}
-      subtitle={codeSent ? `أدخل الرمز المرسل إلى ${email}` : "مرحبًا بك في coopai"}
+      subtitle={codeSent ? `أدخل الرمز المرسل إلى ${email}` : "مرحبًا بك في Cupai"}
     >
       <form onSubmit={onSubmit} className="space-y-4" dir="rtl">
         {mode === "signup" ? (
