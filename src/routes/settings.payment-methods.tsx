@@ -5,6 +5,7 @@ import { ArrowLeft, CreditCard, Loader2, Pencil, Plus, Trash2 } from "lucide-rea
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
+import { CupaiLogo } from "@/components/cupai-logo";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
