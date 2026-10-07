@@ -17,9 +17,9 @@ import {
 export const Route = createFileRoute("/admin")({
   head: () => ({
     meta: [
-      { title: "إدارة التجار · coopai" },
-      { name: "description", content: "لوحة إدارة حسابات التجار في coopai." },
-      { property: "og:title", content: "إدارة التجار · coopai" },
+      { title: "إدارة التجار · Cupai" },
+      { name: "description", content: "لوحة إدارة حسابات التجار في Cupai." },
+      { property: "og:title", content: "إدارة التجار · Cupai" },
       { property: "og:description", content: "لوحة إدارة خاصة." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

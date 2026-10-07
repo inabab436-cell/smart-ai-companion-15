@@ -79,15 +79,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "coopai — إدارة محادثات العملاء" },
-      { name: "description", content: "coopai منصة لإدارة محادثات العملاء." },
+      { title: "Cupai — إدارة محادثات العملاء" },
+      { name: "description", content: "Cupai منصة لإدارة محادثات العملاء." },
       { name: "author", content: "cupai" },
-      { property: "og:title", content: "coopai — إدارة محادثات العملاء" },
-      { property: "og:description", content: "coopai منصة لإدارة محادثات العملاء." },
+      { property: "og:title", content: "Cupai — إدارة محادثات العملاء" },
+      { property: "og:description", content: "Cupai منصة لإدارة محادثات العملاء." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "coopai — إدارة محادثات العملاء" },
-      { name: "twitter:description", content: "coopai منصة لإدارة محادثات العملاء." },
+      { name: "twitter:title", content: "Cupai — إدارة محادثات العملاء" },
+      { name: "twitter:description", content: "Cupai منصة لإدارة محادثات العملاء." },
     ],
     links: [
       {
