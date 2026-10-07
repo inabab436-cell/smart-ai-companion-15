@@ -62,14 +62,20 @@ export function CupaiMark({ className, light }: LogoProps) {
 }
 
 /** Full logo: mark + "Cupai" wordmark. */
-export function CupaiLogo({ className, light }: LogoProps) {
+export function CupaiLogo({
+  className,
+  light,
+  markClassName,
+  textClassName,
+}: LogoProps & { markClassName?: string; textClassName?: string }) {
   return (
     <span className={cn("inline-flex items-center gap-2.5", className)}>
-      <CupaiMark light={light} />
+      <CupaiMark light={light} className={markClassName} />
       <span
         className={cn(
           "text-xl font-extrabold tracking-tight",
-          light ? "text-primary-foreground" : "text-foreground"
+          light ? "text-primary-foreground" : "text-foreground",
+          textClassName
         )}
       >
         Cupai
