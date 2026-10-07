@@ -6,14 +6,15 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { CupaiLogo, CupaiMark } from "@/components/cupai-logo";
 import { getSessionInfo } from "@/lib/auth.functions";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "coopai — إدارة متجرك" },
-      { name: "description", content: "coopai: أدر منتجاتك وطلباتك وعملاءك من لوحة تحكم واحدة." },
-      { property: "og:title", content: "coopai — إدارة متجرك" },
+      { title: "Cupai — إدارة متجرك" },
+      { name: "description", content: "Cupai: أدر منتجاتك وطلباتك وعملاءك من لوحة تحكم واحدة." },
+      { property: "og:title", content: "Cupai — إدارة متجرك" },
       { property: "og:description", content: "أدر منتجاتك وطلباتك وعملاءك من لوحة تحكم واحدة." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -53,7 +54,7 @@ function Index() {
       <header className="sticky top-0 z-20 border-b border-border bg-card/90 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
           <div className="flex items-center gap-2">
-            <span className="text-base font-extrabold">coopai</span>
+            <CupaiLogo />
           </div>
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="sm" onClick={toLogin}>تسجيل الدخول</Button>
@@ -71,7 +72,7 @@ function Index() {
             اعرض منتجاتك، استقبل طلباتك،<br className="hidden sm:block" /> وأدرها من مكان واحد
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-            coopai تمنحك متجرًا جاهزًا برابط خاص ولوحة تحكم بسيطة لمتابعة الطلبات والشحن والدفع.
+            Cupai تمنحك متجرًا جاهزًا برابط خاص ولوحة تحكم بسيطة لمتابعة الطلبات والشحن والدفع.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button size="lg" className="w-full px-10 sm:w-auto" onClick={toLogin}>
@@ -147,7 +148,7 @@ function Index() {
         </section>
       </main>
 
-      <footer className="border-t border-border py-6 text-center text-xs text-muted-foreground">© coopai</footer>
+      <footer className="border-t border-border py-6 text-center text-xs text-muted-foreground">© Cupai</footer>
     </div>
   );
 }
