@@ -18,7 +18,7 @@ export function AuthCard({
     <div dir="rtl" className="hub grid min-h-screen bg-background lg:grid-cols-2">
       <aside className="relative hidden overflow-hidden bg-gradient-brand p-12 lg:flex lg:flex-col lg:justify-between">
         <div className="flex items-center gap-3">
-          <CupaiLogo markClassName="h-8 w-8" textClassName="text-xl font-extrabold text-primary-foreground" />
+          <CupaiLogo light markClassName="h-8 w-8" textClassName="text-xl font-extrabold text-primary-foreground" />
         </div>
         <div className="space-y-4">
           <h2 className="text-4xl font-extrabold leading-tight text-primary-foreground">متجرك كله<br />في لوحة واحدة</h2>

@@ -64,14 +64,16 @@ export function CupaiLogo({
   markClassName = "h-7 w-7",
   textClassName = "text-base font-extrabold tracking-tight",
   className = "",
+  light = false,
 }: {
   markClassName?: string;
   textClassName?: string;
   className?: string;
+  light?: boolean;
 }) {
   return (
     <span className={`inline-flex items-center gap-2 ${className}`}>
-      <CupaiMark className={markClassName} />
+      <CupaiMark className={markClassName} light={light} />
       <span className={textClassName}>
         Cupai
       </span>
