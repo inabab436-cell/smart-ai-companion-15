@@ -1,18 +1,31 @@
+import { cn } from "@/lib/utils";
+
+type LogoProps = {
+  className?: string;
+  /** Use on dark/colored backgrounds — renders in primary-foreground */
+  light?: boolean;
+};
+
 /**
- * Cupai brand logo — hand-drawn inline SVG (not an image file).
- * Concept: a warm cup whose steam rises into an AI spark,
- * expressing "Cupai" = a cup of smart assistance for your store.
+ * Cupai letterform mark — a bold "C" whose counter holds a rising "p" stem,
+ * drawn as pure vector paths (no images, no AI iconography).
  */
-export function CupaiMark({ className = "h-8 w-8", light = false }: { className?: string; light?: boolean }) {
-  const gid = light ? "cupai-g-light" : "cupai-g";
+export function CupaiMark({ className, light }: LogoProps) {
+  const id = light ? "cupai-lg-light" : "cupai-lg";
   return (
-    <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden="true">
+    <svg
+      viewBox="0 0 48 48"
+      fill="none"
+      role="img"
+      aria-label="Cupai"
+      className={cn("h-9 w-9", className)}
+    >
       <defs>
-        <linearGradient id={gid} x1="8" y1="6" x2="40" y2="44" gradientUnits="userSpaceOnUse">
+        <linearGradient id={id} x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse">
           {light ? (
             <>
               <stop offset="0" stopColor="var(--primary-foreground)" />
-              <stop offset="1" stopColor="color-mix(in oklab, var(--primary-foreground) 55%, transparent)" />
+              <stop offset="1" stopColor="color-mix(in oklab, var(--primary-foreground) 60%, transparent)" />
             </>
           ) : (
             <>
@@ -22,59 +35,43 @@ export function CupaiMark({ className = "h-8 w-8", light = false }: { className?
           )}
         </linearGradient>
       </defs>
-      {/* AI spark rising from the cup */}
+      {/* Bold rounded "C" */}
       <path
-        d="M24 3.5c.7 3.6 2.6 5.5 6.2 6.2-3.6.7-5.5 2.6-6.2 6.2-.7-3.6-2.6-5.5-6.2-6.2 3.6-.7 5.5-2.6 6.2-6.2Z"
-        fill={`url(#${gid})`}
-      />
-      <circle cx="33.5" cy="13" r="1.6" fill={`url(#${gid})`} opacity="0.8" />
-      {/* cup body */}
-      <path
-        d="M11 20h22v9.5A11.5 11.5 0 0 1 21.5 41h-1A11.5 11.5 0 0 1 11 29.5V20Z"
-        fill={`url(#${gid})`}
-      />
-      {/* handle */}
-      <path
-        d="M33 22.5h2.4a5.1 5.1 0 0 1 0 10.2H33"
-        stroke={`url(#${gid})`}
-        strokeWidth="3"
+        d="M34.5 13.2C31.4 9.9 27.2 8 22.6 8 14.9 8 8.6 14.3 8.6 22c0 7.7 6.3 14 14 14 4.6 0 8.8-1.9 11.9-5.2"
+        stroke={`url(#${id})`}
+        strokeWidth="6.4"
         strokeLinecap="round"
       />
-      {/* saucer */}
-      <path
-        d="M9 44.5h26"
-        stroke={`url(#${gid})`}
-        strokeWidth="3"
-        strokeLinecap="round"
-        opacity="0.65"
+      {/* "p" bowl nested in the C opening */}
+      <circle
+        cx="33"
+        cy="22"
+        r="6.5"
+        stroke={`url(#${id})`}
+        strokeWidth="5"
       />
-      {/* inner highlight — the "smile" of the cup */}
+      {/* "p" stem dropping below the baseline */}
       <path
-        d="M16.5 24.5c1.2 4.5 3.8 7.4 7.5 8.4"
-        stroke="var(--primary-foreground)"
-        strokeWidth="2.4"
+        d="M33 28.5V42"
+        stroke={`url(#${id})`}
+        strokeWidth="5"
         strokeLinecap="round"
-        opacity="0.85"
       />
     </svg>
   );
 }
 
-export function CupaiLogo({
-  markClassName = "h-7 w-7",
-  textClassName = "text-base font-extrabold tracking-tight",
-  className = "",
-  light = false,
-}: {
-  markClassName?: string;
-  textClassName?: string;
-  className?: string;
-  light?: boolean;
-}) {
+/** Full logo: mark + "Cupai" wordmark. */
+export function CupaiLogo({ className, light }: LogoProps) {
   return (
-    <span className={`inline-flex items-center gap-2 ${className}`}>
-      <CupaiMark className={markClassName} light={light} />
-      <span className={textClassName}>
+    <span className={cn("inline-flex items-center gap-2.5", className)}>
+      <CupaiMark light={light} />
+      <span
+        className={cn(
+          "text-xl font-extrabold tracking-tight",
+          light ? "text-primary-foreground" : "text-foreground"
+        )}
+      >
         Cupai
       </span>
     </span>
