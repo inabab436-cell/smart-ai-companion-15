@@ -25,25 +25,25 @@ export function CupaiMark({ className = "h-8 w-8", light = false }: { className?
       {/* AI spark rising from the cup */}
       <path
         d="M24 3.5c.7 3.6 2.6 5.5 6.2 6.2-3.6.7-5.5 2.6-6.2 6.2-.7-3.6-2.6-5.5-6.2-6.2 3.6-.7 5.5-2.6 6.2-6.2Z"
-        fill="`url(#${gid})`"
+        fill={`url(#${gid})`}
       />
-      <circle cx="33.5" cy="13" r="1.6" fill="`url(#${gid})`" opacity="0.8" />
+      <circle cx="33.5" cy="13" r="1.6" fill={`url(#${gid})`} opacity="0.8" />
       {/* cup body */}
       <path
         d="M11 20h22v9.5A11.5 11.5 0 0 1 21.5 41h-1A11.5 11.5 0 0 1 11 29.5V20Z"
-        fill="`url(#${gid})`"
+        fill={`url(#${gid})`}
       />
       {/* handle */}
       <path
         d="M33 22.5h2.4a5.1 5.1 0 0 1 0 10.2H33"
-        stroke="`url(#${gid})`"
+        stroke={`url(#${gid})`}
         strokeWidth="3"
         strokeLinecap="round"
       />
       {/* saucer */}
       <path
         d="M9 44.5h26"
-        stroke="`url(#${gid})`"
+        stroke={`url(#${gid})`}
         strokeWidth="3"
         strokeLinecap="round"
         opacity="0.65"
