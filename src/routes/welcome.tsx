@@ -109,7 +109,7 @@ function WelcomePage() {
       <header className="border-b border-border bg-card/90 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-2xl items-center justify-between px-4">
           <div className="flex items-center gap-2">
-            <span className="text-sm font-bold">Cupai</span>
+            <CupaiLogo markClassName="h-6 w-6" textClassName="text-sm font-bold" />
           </div>
           {step < 3 ? (
             <button type="button" onClick={finish} disabled={busy} className="text-xs font-semibold text-muted-foreground hover:text-foreground">
