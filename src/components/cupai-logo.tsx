@@ -11,13 +11,13 @@ export function CupaiMark({ className = "h-8 w-8", light = false }: { className?
         <linearGradient id={gid} x1="8" y1="6" x2="40" y2="44" gradientUnits="userSpaceOnUse">
           {light ? (
             <>
-              <stop offset="0" stopColor="hsl(var(--primary-foreground))" />
-              <stop offset="1" stopColor="hsl(var(--primary-foreground) / 0.55)" />
+              <stop offset="0" stopColor="var(--primary-foreground)" />
+              <stop offset="1" stopColor="color-mix(in oklab, var(--primary-foreground) 55%, transparent)" />
             </>
           ) : (
             <>
-              <stop offset="0" stopColor="hsl(var(--primary))" />
-              <stop offset="1" stopColor="hsl(var(--primary) / 0.55)" />
+              <stop offset="0" stopColor="var(--primary)" />
+              <stop offset="1" stopColor="color-mix(in oklab, var(--primary) 55%, transparent)" />
             </>
           )}
         </linearGradient>
