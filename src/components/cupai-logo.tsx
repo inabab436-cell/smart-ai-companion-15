@@ -3,13 +3,23 @@
  * Concept: a warm cup whose steam rises into an AI spark,
  * expressing "Cupai" = a cup of smart assistance for your store.
  */
-export function CupaiMark({ className = "h-8 w-8" }: { className?: string }) {
+export function CupaiMark({ className = "h-8 w-8", light = false }: { className?: string; light?: boolean }) {
+  const gid = light ? "cupai-g-light" : "cupai-g";
   return (
     <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden="true">
       <defs>
-        <linearGradient id="cupai-g" x1="8" y1="6" x2="40" y2="44" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stopColor="hsl(var(--primary))" />
-          <stop offset="1" stopColor="hsl(var(--primary) / 0.55)" />
+        <linearGradient id={gid} x1="8" y1="6" x2="40" y2="44" gradientUnits="userSpaceOnUse">
+          {light ? (
+            <>
+              <stop offset="0" stopColor="hsl(var(--primary-foreground))" />
+              <stop offset="1" stopColor="hsl(var(--primary-foreground) / 0.55)" />
+            </>
+          ) : (
+            <>
+              <stop offset="0" stopColor="hsl(var(--primary))" />
+              <stop offset="1" stopColor="hsl(var(--primary) / 0.55)" />
+            </>
+          )}
         </linearGradient>
       </defs>
       {/* AI spark rising from the cup */}
